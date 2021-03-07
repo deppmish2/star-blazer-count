@@ -10,7 +10,7 @@ github_token = os.getenv("GITHUB_ACCESS_TOKEN",None)
 dirpath = os.getcwd()
 filepath =  os.path.join(dirpath,'output.csv')
 
-per_page = 100
+items_per_page = 100
 
 if github_token:
     final_authorization = "token " + github_token
@@ -102,12 +102,12 @@ def main_function(github_owner_name: str, github_project_name: str) -> dict:
         print(traceback.format_exc())
         return response
 
-    total_pages = int(math.ceil(total_star_count / (per_page)))
+    total_pages = int(math.ceil(total_star_count / (items_per_page)))
 
     try:
         processes = []
         for page in range(1, total_pages + 1):
-            pool = Process(target=generate_data, args=(page,github_owner_name, github_project_name, per_page))
+            pool = Process(target=generate_data, args=(page, github_owner_name, github_project_name, items_per_page))
             pool.start()
             processes.append(pool)
 
