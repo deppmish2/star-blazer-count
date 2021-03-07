@@ -1,0 +1,10 @@
+_infra/*
+.circleci/*
+.git/*
+.gitignore
+dist/*
+Dockerfile
+node_modules/*
+README.md
+scripts/*
+venv/*
