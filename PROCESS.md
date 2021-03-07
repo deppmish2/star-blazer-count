@@ -22,7 +22,7 @@ I am familier with using Pandas to generate, append and save a csv file.
 I did the implementation and again tested using Postman for a few sample repos.
 
 It did work but to improve the algorithm and make it faster (the average response times were quite high), I multithreaded 
-the proceseses to fetch and save the data. Multithreading was a choice as the application requires heavy I/O bound operations.
+the processes to fetch and save the data. Multithreading was a choice as the application requires heavy I/O bound operations.
 
 Then the next step was to Dockerize the application and test it throughly again using Postman followed by Readme file.
 Docker Containers allow to package up an application with all of the parts it needs, such as libraries and other 
