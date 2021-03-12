@@ -110,9 +110,9 @@ def main_function(github_owner_name: str, github_project_name: str) -> dict:
             pool = Process(target=generate_data, args=(page, github_owner_name, github_project_name, items_per_page))
             pool.start()
             processes.append(pool)
-
-            for process in processes:
-                process.join()
+            
+        for process in processes:
+            process.join()
         return {
             'success': True
         }
