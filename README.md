@@ -28,7 +28,7 @@ Read more about [this](https://docs.github.com/en/developers/apps/rate-limits-fo
 Start Docker App and run the following commands :
 
 	docker image build -t stargazer .
-	docker run -v ${PWD}:/app -p 9300:9300 -d stargazer
+	docker run -v ${PWD}:/app -p 9300:9300 -d stargazer -.env GITHUB_ACCESS_TOKEN=your_token
 
 *** PWD is the current working directory.
 
