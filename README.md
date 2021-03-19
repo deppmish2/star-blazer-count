@@ -51,5 +51,3 @@ Example : Run ->
            http://0.0.0.0:9300/getStarCountData
            
 This will produce output.csv file in current working directory. 
-
-#### The process of writing this application lies in [here](https://github.com/deppmish2/star-blazer-count/blob/main/PROCESS.md)
